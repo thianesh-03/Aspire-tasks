@@ -1,5 +1,5 @@
 body {
-    background-image: url("/images/background/login_background.jpeg");
+    background-image: url("images/background/login_background.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -22,8 +22,6 @@ input[type="text"], input[type="number"], input[type="date"], input[type="file"]
     border-radius: 5px;
     box-sizing: border-box;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 label {
     font-weight: bold;
@@ -39,9 +37,7 @@ label {
     align-items: center;
     margin-bottom: 20px;
 }
-.radio-group input[type="radio"] {
-    margin-right: 5px;
-}
+
 .radio-group label {
     margin-right: 20px;
 }
