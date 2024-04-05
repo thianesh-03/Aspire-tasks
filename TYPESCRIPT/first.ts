@@ -8,7 +8,6 @@ class Employee{
         // return this.empid
         console.log(this.empid)
     }
-    
 }
 let empDt=new Employee;
 empDt.displayId();
