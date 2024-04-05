@@ -1,5 +1,5 @@
 body{
-    background-image: url("/images/background/login_background.jpeg");
+    background-image: url("images/background/login_background.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;

@@ -18,9 +18,9 @@
     </form>
     <script>
         function checkInputs() {
-            const passwordInput = document.getElementById('password');
+            let passwordInput = document.getElementById('password');
             if (passwordInput) {
-                const passwordValue = passwordInput.value.trim();
+                let passwordValue = passwordInput.value.trim();
                 if (passwordValue === "12345678") {
                     alert("WELCOME BACK!!");
                     document.getElementById("loginForm").action="options.html";
