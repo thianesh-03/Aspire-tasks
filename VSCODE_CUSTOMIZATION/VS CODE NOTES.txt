@@ -7,20 +7,20 @@ ctrl + shift + m => problems terminal
 ctrl + w => close file
 cp(command palette)> -> advanced new file -> file location -> file name and type => To create a new file
 alt + split option => to open bottom top side editing
-view -> editor layout => multipe view optoins like grid and etc
+view -> editor layout => multiple view options like grid and etc
 ctrl + B -> open file bar
-*ctrl + space => trigger inteliscence*
-r click -> goto defenition => cursor will goto the definition of the function
+*ctrl + space => trigger intellisense*
+r click -> goto definition => cursor will goto the definition of the function
 
 Find and replace:
 ctrl + F -> click the dropdown arrow to access the replace option
-ctrl + shift + l => select all the occurences and can replace at all occurences
+ctrl + shift + l => select all the occurrences and can replace at all occurrences
 use search option at the menu bar to search between files and can exclude files too
-To seacrh in a specific folder right click on the folder and click "find in folder"
-ctrl + shift + f => find all occurances and show it in the file explorer
+To search in a specific folder right click on the folder and click "find in folder"
+ctrl + shift + f => find all occurrences and show it in the file explorer
 
 right on function -> "select rename symbol" => To rename a symbol across all files
-peek => opens the function defenition right below
+peek => opens the function definition right below
 ctrl + shift + x => To open the extensions tab
 
 snippets:
@@ -29,7 +29,7 @@ snippets:
 
 emmet:
 cheat sheet available on emmet site
-short form for writing repititive code
+short form for writing repetitive code
 > -> wrap with abbreviation => have the selected content within desired tag
 > -> outward => select all the content within the selected content
 
@@ -43,16 +43,23 @@ npm:
 packages.json -> v button => gives all the latest versions of the module
 
 Javascript:
-/** + tab => to add the comment about the function, Intelliscence will read that and understand more give more suggestions
-ctrl + t => to search symbol accross all files
+/** + tab => to add the comment about the function, Intellisense will read that and understand more give more suggestions
+ctrl + t => to search symbol across all files
 ctrl + shift + o => search symbols in current file
 ctrl + alt + l => to create a console.log()
 
-
-
-
-
-
+Github:
+> -> push => to push the files
+> -> sync symbol bottom-left => to push and pull all the commits
+> -> create branch -> branch name => create a new branch in the remote repo
+> -> git clone -> enter url => clone an repo
+> -> git init -> initialize git environment
+> -> branch => change between branches/ you can see the changes in the bottom-left near the push and pull button
+> -> history => git history and commits
+alt + h => git history
+git blame => last edited person
+r click + goto: online link => opens the file in repo directly
+ctrl + shift + g => to see previous commits
 
 
 
