@@ -11,6 +11,7 @@ view -> editor layout => multiple view options like grid and etc
 ctrl + B -> open file bar
 *ctrl + space => trigger intellisense*
 r click -> goto definition => cursor will goto the definition of the function
+ctrl + \ => split editor
 
 Find and replace:
 ctrl + F -> click the dropdown arrow to access the replace option
@@ -61,11 +62,25 @@ git blame => last edited person
 r click + goto: online link => opens the file in repo directly
 ctrl + shift + g => to see previous commits
 
+ctrl + s => save and format the doc automatically
 
+Line management:
+l alt + up or down => move the line entirely
+l shift + l alt + up or down => duplicate line
 
+Navigation keys:
+ctrl + p => open file within the folder
+ctrl + g => goto specific line
+f12 => goto definition
+
+Multi-cursor:
+l alt + l click -> select multiple locations => multi cursor option
+ctrl + d => select next instance
+ctrl + shift + l => select all occurrences
+shift + l alt => column based selecting
 
 explore:
 1. es lint rules
 2. emmet cheat sheet
 3. javascript booster logs
-4. 
+4. key bindings for visual code
