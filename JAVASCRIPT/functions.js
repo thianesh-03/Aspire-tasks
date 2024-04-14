@@ -66,5 +66,5 @@ try {
 } catch (error) {
   throw "Precision error :" + error;
 } finally {
-  console.log("Coudn't complete");
+  console.log("couldn't complete");
 }
