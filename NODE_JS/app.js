@@ -13,9 +13,34 @@
 //     console.log(req);
 // } No need for external functions
 const http = require("http");
-
+const fs = require("fs");
 const server = http.createServer((req, res) => {
-  console.log(req);
-  process.exit();//to stop the event loop
+  const url = req.url;
+  const method = req.method;
+  if (url === "/") {
+    res.setHeader("Content-type", "text/html");
+    res.write("<html>");
+    res.write("<body>");
+    res.write("<form action=\"/sample\" method='POST'>");
+    res.write(
+      '<input type="text" name="sample"><input type="submit" value="send">'
+    );
+    res.write("</form>");
+    res.write("</body>");
+    res.write("</html>");
+    return res.end();
+  }
+  if (url === "/sample" && method == 'POST') {
+    fs.writeFileSync("hello.txt", "Dummy");
+    res.setHeader("Location", "/");
+    res.statusCode = 302;
+    return res.end();
+  }
+  res.setHeader("Content-type", "text/html");
+  res.write("<html>");
+  res.write("<body><h1>Server's response url:</h1></body>");
+  res.write("</html>");
+  res.end();
+  //process.exit();//to stop the event loop
 });
 server.listen(3000);
