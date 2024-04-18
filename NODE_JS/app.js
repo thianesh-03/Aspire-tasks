@@ -30,7 +30,19 @@ const server = http.createServer((req, res) => {
     res.write("</html>");
     return res.end();
   }
-  if (url === "/sample" && method == 'POST') {
+  if (url === "/sample" && method == "POST") {
+    const body = [];
+    req.on("data", (chunk) => {
+      console.log("Chunk:");
+      console.log(chunk);
+      body.push(chunk);
+    });
+    req.on("end", () => {
+      const parsedBody = Buffer.concat(body).toString();
+      const splittedMessage = parsedBody.split("=");
+      console.log(splittedMessage[1]);
+    });
+
     fs.writeFileSync("hello.txt", "Dummy");
     res.setHeader("Location", "/");
     res.statusCode = 302;
