@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thianesh G. - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.6;
+            color: #333;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to right, rgba(12, 38, 70, 0.9), rgba(32, 64, 101, 0.9));
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            font-size: 24px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #204065;
+            text-align: center;
+            position: relative;
+        }
+
+        section h2::before {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background-color: #204065;
+        }
+
+        /* About Section */
+        #about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #about p {
+            max-width: 800px;
+            margin-bottom: 20px;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        #about .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Skills Section */
+        #skills ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #skills li {
+            background-color: #204065;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 20px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Projects Section */
+        .project {
+            background-color: rgba(249, 249, 249, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .project h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Experience Section */
+        .experience {
+            background-color: rgba(249, 249, 249, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .experience:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Achievements Section */
+        #achievements ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #achievements li {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: rgba(249, 249, 249, 0.9);
+            border-radius: 20px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease;
+        }
+
+        #achievements li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: rgba(32, 64, 101, 0.9);
+            color: #fff;
+            padding: 40px;
+            border-radius: 5px;
+        }
+
+        #contact h2 {
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        #contact h2::before {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background-color: #fff;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        form button[type="submit"] {
+            background-color: #fff;
+            color: #204065;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        form button[type="submit"]:hover {
+            background-color: #0c2646;
+            color: #fff;
+        }
+
+        .social-links ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-links li {
+            margin: 0 10px;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ccc;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            nav a {
+                margin: 0 5px}}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Thianesh G</h1>
+        <p>Software Engineer</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am Thianesh Govindasamy, a Software Engineer with a strong passion for Object-Oriented Programming and Problem-solving. My educational background includes a B.Tech in Information Technology from Bannari Amman Institute of Technology, where I achieved a CGPA of 8.77 (up to the 7th semester).</p>
+        
+            <h3>Career Objective</h3>
+            <p>To secure a position within a reputable company where I can enhance and refine my skill set, continually challenge myself to foster growth and actively contribute to the advancement of the organization's goals and objectives.</p>
+        
+            <h3>Education</h3>
+            <ul>
+                <li>
+                    <strong>B.Tech Information Technology</strong><br>
+                    Bannari Amman Institute Of Technology<br>
+                    Present | Sathyamangalam<br>
+                    8.77 CGPA (Up-to 7th Semester)
+                </li>
+                <li>
+                    <strong>HSC</strong><br>
+                    Green Garden Matric Higher Secondary School, Erode<br>
+                    Graduated in 2020<br>
+                    Percentage - 58.12%
+                </li>
+                <li>
+                    <strong>SSLC</strong><br>
+                    Kongu National Matric Higher Secondary School, Erode<br>
+                    Graduated in 2018<br>
+                    Percentage - 81.2%
+                </li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>C</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>SQL</li>
+                <li>HTML/CSS</li>
+            </ul>
+        
+            <h3>Tools</h3>
+            <ul>
+                <li>Photoshop</li>
+                <li>Android Studio</li>
+                <li>Figma</li>
+                <li>Inkscape</li>
+                <li>VN editor</li>
+            </ul>
+        
+            <h3>Personal Skills</h3>
+            <ul>
+                <li>Quick Learner</li>
+                <li>Creative Thinking</li>
+                <li>Leadership</li>
+                <li>Adaptive Nature</li>
+            </ul>
+        
+            <h3>Languages Known</h3>
+            <ul>
+                <li>English (R, W, S)</li>
+                <li>Tamil (R, W, S)</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Android based image steganography</h3>
+                <p>Engineered an Android steganography app using Java and Android SDK to conceal confidential data within images securely. Implemented LSB methods to bolster information protection.</p>
+                <p><strong>Team size:</strong> 3 | <strong>Tools:</strong> Python, JAVA</p>
+            </div>
+        
+            <div class="project">
+                <h3>User registration portal</h3>
+                <p>This Android application employs Firebase as its database to perform comprehensive CRUD operations on user data, generating unique IDs for users all developed within the Android Studio environment.</p>
+                <p><strong>Team size:</strong> 1 | <strong>Tools:</strong> JAVA, Android Studio</p>
+            </div>
+        
+            
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience">
+                <h3>Internship</h3>
+                <p><strong>DLK Career Development</strong></p>
+                <p><strong>Duration:</strong> 15 days</p>
+                <ul>
+                    <li>Internship on Android application development.</li>
+                    <li>Designed a secondary page for users after they completed voting.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Solved 120+ problems in Geeks For Geeks</li>
+                <li>Solved 70+ problems in Leetcode</li>
+                <li>Solved 140+ problems in Codechef</li>
+                <li>59 - Institute rank in GFG</li>
+                <li>Qualified to 3rd round in Innovative India Coding Championship conducted by coding ninjas.</li>
+                <li>Qualified to final round in PUROJEKUTO 2K21 by Kongu Engineering College.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <p><strong>Name:</strong> Thianesh Govindasamy</p>
+                <p><strong>Email:</strong> thianesh2003@gmail.com</p>
+                <p><strong>Phone:</strong> 9677607312</p>
+                <p><strong>Address:</strong> 66/C1, Hitech Homes, Thindal Medu, Perundurai Road, Erode-012</p>
+            </div>
+        
+            <h3>Get in Touch</h3>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+        
+                <button type="submit">Send Message</button>
+            </form>
+        
+            <div class="social-links">
+                <h3>Connect with Me:</h3>
+                <ul>
+                    <li><a href="https://github.com/thianesh-g-686975200" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/thianesh-03/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/thianes2003/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/thianesh_g" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Thianesh G</p>
+    </footer>
+</body>
+</html>
