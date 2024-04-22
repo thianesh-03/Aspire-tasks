@@ -30,7 +30,7 @@ nums.sort();
 console.log(nums);
 nums.sort((a, b) => {
   return a - b;
-}); //No difference betwen both sort functions
+}); //No difference between both sort functions
 console.log(nums);
 nums.sort((a, b) => {
   return b - a;
