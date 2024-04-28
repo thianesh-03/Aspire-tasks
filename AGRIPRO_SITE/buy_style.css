@@ -1,6 +1,6 @@
 body {
   font-family: "Open Sans", sans-serif;
-  background-image: url("images/background/login_background.jpeg");
+  background-image: url("images/background/home_background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -15,7 +15,7 @@ body {
 h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: rgb(38, 114, 63);
+  color: rgb(21, 94, 44);
 }
 
 .product-container {
@@ -29,7 +29,7 @@ h1 {
   border: 1px solid #ccc;
   padding: 20px;
   margin: 20px;
-  background-color: rgb(38, 114, 63);
+  background-color: rgb(144, 158, 149);
   max-width: 300px;
   text-align: center;
   border-radius: 10px;
@@ -58,7 +58,7 @@ a {
 }
 
 nav ul li a:hover {
-  background-color: rgba(165, 182, 125, 0.2);
+  background-color: rgba(48, 48, 48, 0.2);
 }
 
 
@@ -70,10 +70,11 @@ nav {
 
 nav ul {
   list-style-type: none;
-  margin: 0;
+  margin: 10px;
+  bottom: 20px;
   padding: 0;
   display: flex;
-  background-color: rgba(51, 102, 51, 0.8);
+  background-color: rgb(144, 158, 149);
   border-radius: 30px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   padding: 10px;
@@ -86,7 +87,7 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 10px 50px;
   border-radius: 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-weight: bold;
@@ -94,12 +95,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: rgba(
-    165,
-    182,
-    125,
-    0.8
-  );
+  background-color: rgba(193, 194, 192, 0.8);
   color: #333;
 }
 
