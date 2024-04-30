@@ -1,4 +1,4 @@
-capped collecttion - will only store specified number of documents. If the count exceeds then the first document will replaced or overridden.
+capped collection - will only store specified number of documents. If the count exceeds then the first document will replaced or overridden.
 syntax - db.createCollection("users",{capped:true,size:100000,max:100});
 max- document count, size-total file size
 
