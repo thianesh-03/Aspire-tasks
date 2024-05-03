@@ -14,7 +14,24 @@ to insert many values at once - db.users.insertMany([{id:"U001",username:"Thiane
 
 to see the data in form of json - db.users.find().pretty();
 
+to filter and find documents based on conditions - db.products.find({price:{$lte:'40'}});
+price is the key or name and the '40' inside is the value;
 
+comparison query commands:
+$eq(equals), $gt (greater than), $gte (greater than or equal to), $lt (less than), $lte (less than or equal to), $ne (not equal to), $in (matches any of the values in the specified array), $nin (does not match any of the values in the specified array).
+
+Logical query:
+$and - db.products.find({$and: [{price: {$gt: 100}}, {quantity: {$gt: 10}}]})
+$or, $not, $nor
+
+Element Query Operators:
+$exists - db.products.find({reviews: {$exists: true}})
+$type - db.products.find({price: {$type: "double"}})
+
+Evaluation Query Operators:
+$regex (performs a regular expression match on a string field)
+$text - db.products.find({$text: {$search: "iPhone"}})
+$expr (allows the use of aggregation expressions in queries): db.products.find({$expr: {$gt: ["$quantity", 50]}})
 
 
 
