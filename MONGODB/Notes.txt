@@ -40,6 +40,11 @@ to delete an document - db.users.deleteOne({"email":"sachin.t@abc"});
 to update an document - db.users.updateOne({"email":"sachin.t@abc"}, {"$delete"},{upsert: true});
 the upsert is used for making other users to make changes
 
+types of update:
+1.update
+2.updateOne
+3.updateMany
+
 
 Task:
 
