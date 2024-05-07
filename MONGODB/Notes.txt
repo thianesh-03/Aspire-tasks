@@ -45,6 +45,43 @@ types of update:
 2.updateOne
 3.updateMany
 
+to connect mongodb with node js:
+const { MongoClient } = require('mongodb');
+
+// Connection URI
+const uri = 'mongodb://127.0.0.1:27017/aspire';
+
+// Create a new MongoClient
+const client = new MongoClient(uri);
+
+// Connect to the MongoDB server
+async function connectToMongoDB() {
+    try {
+        await client.connect();
+
+        const db=client.db('aspire')
+        const collection=db.collection('user');
+
+        const cursor=collection.find({});
+
+        await cursor.forEach(record=>{
+            console.log(record)
+        })
+        await client.close()
+        
+    } catch (error) {
+        console.error('Error connecting to MongoDB:', error);
+    }
+}
+
+// Call the function to connect
+connectToMongoDB();
+
+to insert many values into the collection:
+const inserter = await collection.insertMany([{"_id":7,"firstName": "thianesh","lastName": "g","gender":"male","email": "thianesh.t@abc.com","salary": 10000,"department": { "name":"IT" }},{ "_id":8,"firstName": "nithesh","lastName": "k","gender":"male","email": "nithesh@abc.com","salary": 5500,"department": { "name":"software" }}])
+
+console.log("record inserted with :"+inserter);
+
 
 Task:
 
