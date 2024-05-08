@@ -37,6 +37,12 @@ async function connectToMongoDB() {
 
     console.log("record inserted with :" + inserter._id);
 
+    await collection.updateOne({'email':"ashwanth@abc.com"},{$set:{'lastName':"ramana"}},{upsert:true});
+
+    await collection.deleteOne({'firstName':"senthil"});
+
+    //await collection.updateOne({'_id':"10"},{$set:{'_id':"9"}},{upsert:true});
+
     const cursor = collection.find({});
 
     await cursor.forEach((record) => {

@@ -80,7 +80,7 @@ connectToMongoDB();
 to insert many values into the collection:
 const inserter = await collection.insertMany([{"_id":7,"firstName": "thianesh","lastName": "g","gender":"male","email": "thianesh.t@abc.com","salary": 10000,"department": { "name":"IT" }},{ "_id":8,"firstName": "nithesh","lastName": "k","gender":"male","email": "nithesh@abc.com","salary": 5500,"department": { "name":"software" }}])
 
-console.log("record inserted with :"+inserter);
+    console.log("record inserted with :"+inserter);
 
 
 Task:
