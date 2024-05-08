@@ -79,8 +79,79 @@ connectToMongoDB();
 
 to insert many values into the collection:
 const inserter = await collection.insertMany([{"_id":7,"firstName": "thianesh","lastName": "g","gender":"male","email": "thianesh.t@abc.com","salary": 10000,"department": { "name":"IT" }},{ "_id":8,"firstName": "nithesh","lastName": "k","gender":"male","email": "nithesh@abc.com","salary": 5500,"department": { "name":"software" }}])
+console.log("record inserted with :"+inserter);
 
-    console.log("record inserted with :"+inserter);
+mongoose:
+used for connecting the database
+called as ODM - Object Document Modelling
+strongly typed schema
+async validation on save
+
+
+creating a schema:
+const schema = mongoose.Schema;
+
+const skillSchema = new schema({
+  skillName: String,
+  experience: Number,
+  proficiency: String,
+});
+
+const jobSeekerSchema = new schema({
+  jobSeekerName: String,
+  emailId: String,
+  age: Number,
+  certified: Boolean,
+  skills: [skillSchema],
+});
+
+connecting using mongoose:
+const js = mongoose.model("jobSeeker", jobSeekerSchema);
+mongoose.connect("mongodb://127.0.0.1:27017/aspire");
+//jobSeeker is the collection
+//collection name will be automatically changed into plural - jobSeekers
+
+creating documents:
+const jobSeeker1 = new js({
+  jobSeekerName: "thianesh",
+  age: 20,
+  emailId: "thianesh@gmail.com",
+  certified: true,
+  skills: [
+    { skillName: "java", experience: 1, proficiency: "beginner" },
+    { skillName: "c++", experience: 2, proficiency: "intermediate" }]
+});
+jobSeeker1.save();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Task:
