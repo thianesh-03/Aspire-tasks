@@ -14,32 +14,32 @@ async function connectToMongoDB() {
     const db = client.db("aspire");
     const collection = db.collection("users");
 
-    const inserter = await collection.insertMany([
-      {
-        _id: 9,
-        firstName: "senthil",
-        lastName: "k",
-        gender: "male",
-        email: "senthil.t@abc.com",
-        salary: 1000,
-        department: { name: "embedded" },
-      },
-      {
-        _id: 10,
-        firstName: "aswanth",
-        lastName: "r",
-        gender: "male",
-        email: "ashwanth@abc.com",
-        salary: 5700,
-        department: { name: "computer" },
-      },
-    ]);
+    // const inserter = await collection.insertMany([
+    //   {
+    //     _id: 9,
+    //     firstName: "senthil",
+    //     lastName: "k",
+    //     gender: "male",
+    //     email: "senthil.t@abc.com",
+    //     salary: 1000,
+    //     department: { name: "embedded" },
+    //   },
+    //   {
+    //     _id: 10,
+    //     firstName: "aswanth",
+    //     lastName: "r",
+    //     gender: "male",
+    //     email: "ashwanth@abc.com",
+    //     salary: 5700,
+    //     department: { name: "computer" },
+    //   },
+    // ]);
 
-    console.log("record inserted with :" + inserter._id);
+    // console.log("record inserted with :" + inserter._id);
 
-    await collection.updateOne({'email':"ashwanth@abc.com"},{$set:{'lastName':"ramana"}},{upsert:true});
+    // await collection.updateOne({'email':"ashwanth@abc.com"},{$set:{'lastName':"ramana"}},{upsert:true});
 
-    await collection.deleteOne({'firstName':"senthil"});
+    // await collection.deleteOne({'firstName':"senthil"});
 
     //await collection.updateOne({'_id':"10"},{$set:{'_id':"9"}},{upsert:true});
 
