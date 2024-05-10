@@ -13,7 +13,7 @@ const jobSeekerSchema = new schema({
   emailId: String,
   age: Number,
   certified: Boolean,
-  skills: [skillSchema],
+  skills: [skillSchema]
 });
 
 const js = mongoose.model("jobSeeker", jobSeekerSchema);
