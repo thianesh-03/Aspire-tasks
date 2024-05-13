@@ -1,0 +1,5 @@
+To create a angular app: ng new appName
+
+To start the app: ng serve
+
+To create an component: ng g c componentName
