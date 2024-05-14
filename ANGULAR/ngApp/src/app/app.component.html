@@ -1,7 +1,17 @@
-<h1>{{title}}</h1>
-<input type="text" [(ngModel)]="title">
-<h2>{{showTitle()}}</h2>
+<!-- <h1>{{ title }}</h1>
+<input type="text" [(ngModel)]="title" />
+<h2>{{ showTitle() }}</h2>
 <h3 [innerText]="title"></h3>
 <button (click)="addCount()">add count</button>
 <button (click)="reduceCount()">reduce count</button>
-<h2>{{clickCount}}</h2>
+<h2>{{ clickCount }}</h2>
+<h2>Movie list using ngFor</h2>
+<ul>
+  <li *ngFor="let movie of movies">{{ movie }}</li>
+</ul> -->
+
+<!-- <input type="checkbox" [(ngModel)]="showMe">
+<p ngIf="showMe">This is a ngIf example para</p> -->
+
+<input type="checkbox" [(ngModel)]="applyRed">
+<p [ngClass]="{'primary':applyRed}">sample Text</p>

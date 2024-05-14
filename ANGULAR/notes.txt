@@ -16,17 +16,36 @@ two way binding - values can be changed at any moment and from both the sides. T
 for the form to work we should first import the FormsModule in the imports array in the components.ts file.
 
 string interpolation: {{}}
--string interpolation can be used for any kind of expressions.
-<h1>{{title}}</h1>
--for showing functions:
+    -string interpolation can be used for any kind of expressions.
+    <h1>{{title}}</h1>
+    -for showing functions:
 
 property binding: binding an element with a property.
-<h3 [innerText]="title"></h3>
-here the [innerText] is property and is binded with h tag.
+    <h3 [innerText]="title"></h3>
+    here the [innerText] is property and is binded with h tag.
 
 event binding: telling what to do when something is done
-<button (click)="addCount()">click!</button>
-<h2>{{clickCount}}</h2>
-(click) is an event listener
-here every time we press the button the click count will be increased
+    <button (click)="addCount()">click!</button>
+    <h2>{{clickCount}}</h2>
+    (click) is an event listener
+    here every time we press the button the click count will be increased
 
+Directives: used to change behavior, appearance or layout of an element
+    ngFor:
+        <ul>
+        <li *ngFor="let movie of movies">{{ movie }}</li>
+        </ul>
+        the *ngFor is a directive and let movie is to create an iterator for the movies array. And we are printing it using string interpolation.
+
+    ngIf: 
+        This is a condition to make content visible and hidden.
+        <input type="checkbox" [(ngModel)]="showMe">
+        <p ngIf="showMe">This is a ngIf example para</p>
+        This para will be displayed only if the checkbox is true.
+
+Attribute directive:
+    ngClass:
+        styling can be applied based on class and object.
+        <input type="checkbox" [(ngModel)]="applyRed">
+        <p [ngClass]="{'primary':applyRed}">sample Text</p>
+        This para will be blue colored only if the checkbox is true.
