@@ -4,7 +4,29 @@ To create a angular app with module.ts file (without standalone components): ng 
 
 To start the app: ng serve (or) npm start
 
-To create an component: ng g c componentName
+To create an component: ng generate component componentName
 
 if ng command shows unauthorized then run: Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+one way binding - values can only be displayed and cannot be changed.
+
+two way binding - values can be changed at any moment and from both the sides. This is done using "ngModel":
+    <h1>{{title}}</h1>
+    <input type="text" [(ngModel)]="title">
+for the form to work we should first import the FormsModule in the imports array in the components.ts file.
+
+string interpolation: {{}}
+-string interpolation can be used for any kind of expressions.
+<h1>{{title}}</h1>
+-for showing functions:
+
+property binding: binding an element with a property.
+<h3 [innerText]="title"></h3>
+here the [innerText] is property and is binded with h tag.
+
+event binding: telling what to do when something is done
+<button (click)="addCount()">click!</button>
+<h2>{{clickCount}}</h2>
+(click) is an event listener
+here every time we press the button the click count will be increased
 
