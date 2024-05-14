@@ -1,5 +1,8 @@
 To create a angular app: ng new appName
 
+To create a angular app with module.ts file (without standalone components): ng new appName --no-standalone
+
 To start the app: ng serve
 
 To create an component: ng g c componentName
+
