@@ -12,11 +12,13 @@
 <tbody>
     @for(product of products;track product)
     {
-        <tr>
-            <td>{{product.productId}}</td>
-            <td>{{product.productName}}</td>
-            <td>{{product.cost}}</td>
-        </tr>
+        @if (product.cost>1000) {
+            <tr>
+                <td>{{product.productId}}</td>
+                <td>{{product.productName}}</td>
+                <td>{{product.cost}}</td>
+            </tr>
+        }
     }
 </tbody>
 </table>
