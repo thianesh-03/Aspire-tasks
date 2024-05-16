@@ -16,4 +16,12 @@
 <!-- <input type="checkbox" [(ngModel)]="applyRed">
 <p [ngClass]="{'primary':applyRed}">sample Text</p> -->
 
-<app-account></app-account>
+<!-- <app-account></app-account> -->
+<!--<app-accholder></app-accholder> 
+<app-root></app-root> -->
+
+<a [routerLink]="'product'">View Product</a>&nbsp;
+<a [routerLink]="'accholder'">Account</a>&nbsp;
+<div>
+  <router-outlet></router-outlet>
+</div>
