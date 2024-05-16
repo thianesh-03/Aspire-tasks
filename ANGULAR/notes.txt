@@ -49,3 +49,30 @@ Attribute directive:
         <input type="checkbox" [(ngModel)]="applyRed">
         <p [ngClass]="{'primary':applyRed}">sample Text</p>
         This para will be blue colored only if the checkbox is true.
+
+Routing:
+Navigating from one page to another.
+To do that we have first import routerLink module in app component.
+Then import all the components in the route.ts page.
+export const routes: Routes = [
+    {
+        path:"product",
+        component:ProductComponent
+    },
+    {
+        path:"accholder",
+        component:AccountComponent
+    },
+    {
+        path:"**",
+        component:ProductComponent
+    }
+];
+
+This is the method to create route paths and map them with their components.
+
+<a [routerLink]="'product'">View Product</a>&nbsp;
+<a [routerLink]="'accholder'">Account</a>&nbsp;
+<router-outlet></router-outlet>
+
+Implement this in the app html page to view the links.
