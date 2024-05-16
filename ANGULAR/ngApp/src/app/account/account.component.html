@@ -17,17 +17,41 @@
       </tr>
     </thead>
     <tbody>
-      @for (accholder of accounts;track accholder){
+      @switch (accType) { @case ("Savings") { @for (accholder of accounts;track
+      accholder){
       <tr>
-        @if (accholder.typeofAccount==accType) {
+        @if (accholder.typeofAccount=="Savings") {
         <th>{{ accholder.accountNumber }}</th>
         <th>{{ accholder.acholderName }}</th>
         <th>{{ accholder.typeofAccount }}</th>
         <th>{{ accholder.amount }}</th>
         <th>{{ accholder.bankname }}</th>
+        <th>{{ accholder.status }}</th>
         }
       </tr>
-      }
+      } } @case ("Current") { @for (accholder of accounts;track accholder){
+      <tr>
+        @if (accholder.typeofAccount=="Current") {
+        <th>{{ accholder.accountNumber }}</th>
+        <th>{{ accholder.acholderName }}</th>
+        <th>{{ accholder.typeofAccount }}</th>
+        <th>{{ accholder.amount }}</th>
+        <th>{{ accholder.bankname }}</th>
+        <th>{{ accholder.status }}</th>
+        }
+      </tr>
+      } } @case ("NRI") { @for (accholder of accounts;track accholder){
+      <tr>
+        @if (accholder.typeofAccount=="NRI") {
+        <th>{{ accholder.accountNumber }}</th>
+        <th>{{ accholder.acholderName }}</th>
+        <th>{{ accholder.typeofAccount }}</th>
+        <th>{{ accholder.amount }}</th>
+        <th>{{ accholder.bankname }}</th>
+        <th>{{ accholder.status }}</th>
+        }
+      </tr>
+      } } }
     </tbody>
   </table>
   <br /><br />
