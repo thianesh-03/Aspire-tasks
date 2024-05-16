@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { ProductComponent } from './product/product.component';
+import { AccountComponent } from './account/account.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, CommonModule, ProductComponent],
+  imports: [RouterOutlet, FormsModule, CommonModule, AccountComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -27,5 +28,5 @@ export class AppComponent {
   // movies = ['zootopia', 'preacher', 'kong', 'zilla', 'batman'];
 
   // showMe = false;
-  applyRed = false;
+  // applyRed = false;
 }
