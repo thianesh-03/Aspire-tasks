@@ -76,3 +76,25 @@ This is the method to create route paths and map them with their components.
 <router-outlet></router-outlet>
 
 Implement this in the app html page to view the links.
+
+Pipes:
+To convert raw data into our expected format.
+to convert date data into date format.
+{{toDate|date}};
+{{toDate|date:'short'}};
+{{toDate|date:"medium"}};
+{{toDate|date:"fullDate"}}; - Displays the date in full text
+
+String manipulation
+{{data|uppercase}};
+{{date|lowercase}};
+
+Slice
+{{data|slice:5:10}};starting:ending indexes ending index will not be printed.
+{{data|slice:-7}} the last 7 indexes will be printed
+
+Price:
+{{price|currency:'INR'}} - will include the rupees symbol before the amount.
+
+
+
