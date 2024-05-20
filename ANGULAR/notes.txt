@@ -96,5 +96,26 @@ Slice
 Price:
 {{price|currency:'INR'}} - will include the rupees symbol before the amount.
 
+@Input decorator:
+This input decorator is used to send values between parent component to child component.
+To do that we need to pace our child class selector inside parent class.
+After that import input decorator.
+And add the decorator before the child class array.
+    @Input('sampleInput') cars:string[] = []; - this is in the child class component
+And in the form html page we should change our selector as follows.
+    <app-child [sampleInput]='parentArray'></app-child>
+Now the whatever the value is added into the parent component array it will also be added to the child class array.
 
+@output decorator:
+This output decorator will be present inside child class and it will emit data to the parent class.
+@output() dataAdded:EventEmitter<string[]> = new EventEmitter;
+addData(){
+    this.dataAdded.emit(this.data);
+}
+and in the selector of the child class in the parent html file
+    <app-child (dataAdded)="dataUpdated($event)></app-child>
+and in the parent class component file
+    dataUpdated(data:string[]){
+        this.data=data;
+    }
 

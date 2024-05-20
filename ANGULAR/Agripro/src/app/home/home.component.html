@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
     />
-    <link rel="stylesheet" href="home_style.css" />
+    <link rel="stylesheet" href="home.component.css" />
   </head>
   <body>
     <header>
@@ -17,10 +17,10 @@
         <h1>Welcome to Agripro</h1>
         <nav>
           <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="buy.html">Buy</a></li>
-            <li><a href="sell.html">Sell</a></li>
-            <li><a href="index.html">Login</a></li>
+            <a [routerLink]="'Home'">Home</a
+            >&nbsp;
+            <a [routerLink]="'Sell'">Sell</a
+            >&nbsp;
           </ul>
         </nav>
       </div>
