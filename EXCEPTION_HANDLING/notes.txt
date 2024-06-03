@@ -1,0 +1,52 @@
+Exception handling - taking care of error that might happen
+
+Types - 
+Checked Exception - compile time Exception - Eg.FileNotFound
+Unchecked Exception - runtime time Exception - Eg. ArrayIndexOutOfBounds, Arithmetic Exception
+
+Try - catch - finally
+
+Any number og catch block can be present.
+
+Specific catch block should always be above default or general catch block.
+
+Try can be nested.
+
+Try cannot be left alone it should be followed by either catch or finally.
+
+Finally will work no matter what. Codes that should be executed even if there is an exception will be written in finally block.
+
+activity:
+1. can we have try only with finally
+2. can we have finally inside try
+3. can we two finally
+
+
+exception:
+
+
+class Shop{
+int itemsNeeded;
+public void setItems(int items) throws NoItemsException{
+if(items==0){
+throw NoItemsException("No items added");
+}
+this.itemsNeeded = items;
+}
+}
+
+public static void main(){
+Shop customerOne = new Shop();
+
+try{
+customerOne.setItems(0);
+}
+catch(NoItemsException exception){
+sout(exception);
+}
+}
+
+class NoItemsException extends exception{
+public NoItemsException(string message){
+}
+}

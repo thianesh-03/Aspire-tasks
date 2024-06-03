@@ -7,7 +7,7 @@ import { HomeComponent } from '../home/home.component';
 @Component({
   selector: 'app-sell',
   standalone: true,
-  imports: [RouterLink,RouterOutlet,FormsModule,CommonModule,HomeComponent],
+  imports: [RouterLink,RouterOutlet,FormsModule,CommonModule],
   templateUrl: './sell.component.html',
   styleUrl: './sell.component.css'
 })

@@ -1,96 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Product List</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agripro</title>
-    <link rel="icon" type="image/x-icon" href="images/icon/favicon.jpeg" />
+    <link rel="icon" type="image/x-icon" href="/images/icon/favicon.jpeg" />
     <link rel="stylesheet" href="sell.component.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <header>
       <h1>Welcome to Agripro</h1>
       <nav>
         <ul>
-          <li><a [routerLink]="'Home'">Home</a></li>
-          <li><a [routerLink]="'Sell'">Buy</a></li>
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/buy" >Buy</a></li>
+          <li><a routerLink="/sell" >Sell</a></li>
         </ul>
       </nav>
     </header>
-    <h1>Product List</h1>
-    <div class="product-container">
-      <a href="payments.html">
-        <div class="product">
-          <img src="assets\images\buypage\hoe.png" alt="Product 1" />
-          <h3>Hoe</h3>
-          <p>
-            a long-handled gardening tool with a thin metal blade, used mainly
-            for weeding.
-          </p>
-          <p class="price">Rs. 700</p>
-        </div></a
-      >
-      <a href="payments.html">
-        <div class="product">
-          <img src="assets\images\buypage\mover.png" alt="Product 2" />
-          <h3>Mower</h3>
-          <p>
-            a device utilizing one or more revolving blades (or a reel) to cut a
-            grass surface to an even height.
-          </p>
-          <p class="price">Rs. 28000</p>
-        </div></a
-      >
-      <a href="payments.html">
-        <div class="product">
-          <img src="assets\images\buypage\plough.png" alt="Product 3" />
-          <h3>Plough</h3>
-          <p>
-            one of the agricultural tools used for the initial soil cultivation
-            in preparation for seed sowing or planting to loosen or turn the
-            soil
-          </p>
-          <p class="price">Rs. 58000</p>
-        </div></a
-      >
-      <a href="payments.html">
-        <div class="product">
-          <img src="assets\images\buypage\shovel.png" alt="Product 3" />
-          <h3>Shovel</h3>
-          <p>
-            a tool used for digging, lifting, and moving bulk materials, such as
-            soil, coal, gravel, snow, sand, or ore
-          </p>
-          <p class="price">Rs. 700</p>
-        </div></a
-      >
-      <a href="payments.html">
-        <div class="product">
-          <img src="assets\images\buypage\sprayer.png" alt="Product 3" />
-          <h3>Sprayer</h3>
-          <p>
-            A sprayer is a device used to spray a liquid, where sprayers are
-            commonly used for projection of water, weed killers
-          </p>
-          <p class="price">Rs. 19800</p>
-        </div></a
-      >
-      <a href="payments.html">
-        <div class="product">
-          <img src="assets\images\buypage\sprayer 2.png" alt="Product 3" />
-          <h3>Sprayer</h3>
-          <p>
-            A sprayer is a device used to spray a liquid, where sprayers are
-            commonly used for projection of water, weed killers
-          </p>
-          <p class="price">Rs. 32000</p>
-        </div></a
-      >
+    <div class="form-container">
+      <label for="name">Name</label>
+      <input type="text" id="name" />
+      <label for="desc">Description</label>
+      <input type="text" id="desc" />
+      <label for="type">Type of the product</label>
+      <input type="text" id="type" />
+      <label for="price">Price</label>
+      <input type="number" id="price" />
+      <label for="mfd">MFD</label>
+      <input type="date" id="mfd" />
+      <label for="fuel">Fuel Type</label>
+      <div class="radio-group">
+        <input type="radio" id="petrol" name="fuel" value="Petrol" />
+        <label for="petrol">Petrol</label>
+        <input type="radio" id="disel" name="fuel" value="Disel" />
+        <label for="disel">Disel</label>
+        <input type="radio" id="electric" name="fuel" value="Electric" />
+        <label for="electric">Electric</label>
+      </div>
+      <label for="num">Phone number</label>
+      <input type="number" id="num" />
+      <label for="photo">Photos</label>
+      <input type="file" id="photo" />
+      <button onclick="alerter()" id="submit-button">SUBMIT</button>
     </div>
+    <script>
+      function alerter() {
+        alert("Product listed for selling successfully!!");
+        window.location.href = "home.html";
+      }
+    </script>
   </body>
 </html>
