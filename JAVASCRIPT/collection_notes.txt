@@ -21,38 +21,34 @@
 		1.HashMap
 		2.TreeMap
 
-	6. Vector - Size is not defenite can be increased
+	6. Vector - Size is not definite can be increased
 
-retainAll()
-
-clear()
-
-set()
-get()
-indexOf()
-listIterator()
-lastIndexOf()
-subList()
-sort()
-
+retainAll() -- Retains only the elements in the list that are contained in the specified collection
+clear() -- removes all elements from the list
+set() -- replaces the element at the specified position in the list with the specified element
+get() -- returns the element at the specified position in the list
+indexOf() -- returns the index of the first occurrence of the specified element in the list, or -1 if the list does not contain the element
+listIterator() -- returns a list iterator over the elements in the list
+lastIndexOf() -- returns the index of the last occurrence of the specified element in the list, or -1 if the list does not contain the element
+subList() -- returns a view of the portion of the list between the specified fromIndex and toIndex
+sort() -- sorts the list according to the order induced by the specified Comparator
 add() -- will return exception if couldn't add
 offer() -- return boolean value for the operation
 remove() -- for removing values
 poll() -- for removing values
-peek()
-
-size()
-isEmpty()
-put(key,value)
-get(key)
-remove(key)
-entrySet()=key,value
-keySet()=key
-values()
-putAll()
-clear()
-replace()
-putIfAbsent()
+peek() -- retrieves, but does not remove, the head of the queue, or returns null if the queue is empty
+size() -- returns the number of elements in the collection
+isEmpty() -- returns true if the collection is empty, false otherwise
+put(key,value) -- associates the specified value with the specified key in the map
+get(key) -- returns the value to which the specified key is mapped, or null if the map contains no mapping for the key
+remove(key) -- removes the mapping for the specified key from the map if present
+entrySet()=key,value -- returns a set view of the mappings contained in the map
+keySet()=key -- returns a set view of the keys contained in the map
+values() -- returns a collection view of the values contained in the map
+putAll() -- copies all of the mappings from the specified map to this map
+clear() -- removes all of the mappings from the map
+replace() -- replaces the entry for the specified key only if it is currently mapped to some value
+putIfAbsent() -- associates the specified value with the specified key in the map if the key is not already associated with a value
 
 
 add():
