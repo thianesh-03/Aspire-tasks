@@ -1,0 +1,10 @@
+Developed by facebook (meta)
+
+advantages:
+1. Debugging is very simple
+
+installing react - npm install create-react-app -g
+
+creating a react app - create-react-app app-name
+
+index.js - entry point for the entire application
