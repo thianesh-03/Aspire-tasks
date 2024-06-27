@@ -1,0 +1,8 @@
+.headText {
+    color: rgb(135, 135, 228);
+  background-color: rgb(55, 55, 56);
+  font-size: 100;
+  font-family: "sans";
+  padding: 20;
+  text-shadow: 5px rgb(255, 255, 255);
+}
