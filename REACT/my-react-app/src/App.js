@@ -1,6 +1,6 @@
 import './App.css';
 import ClassComp from './Components/ClassComp';
-import StateComp from './stateComp';
+import StateComp from './Components/stateComp';
 // import Comp from './comp';
 // import ClassComp from './ClassComp';
 // import Header from './header';

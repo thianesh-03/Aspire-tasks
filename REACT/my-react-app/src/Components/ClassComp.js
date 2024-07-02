@@ -12,7 +12,7 @@ export default class ClassComp extends React.Component {
     return (
       <div>
         <h1>This {this.state.color} and {this.state.day} can be changed</h1>
-        <button onClick={()=>{this.setState({color:'red'})}}>change color</button>
+        <button onClick={()=>{this.setState(previousState=>{return{...previousState,color:'white'}})}}>change color</button>
       </div>
     )
   }
