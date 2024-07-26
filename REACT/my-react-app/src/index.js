@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Arrayer from './Components/array';
+import Form from './Components/Form';
+// import Arrayer from './Components/array';
+// import List from './Components/list';
+// import Timer from './Components/Timer';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Arrayer/>
-  </React.StrictMode>
+  <>
+    <Form/>
+  </>
 );
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
