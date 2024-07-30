@@ -32,8 +32,8 @@ function Form(){
             <label> Enter your email: 
                 <input type="text" name="email" onChange={handleChange}/>
             </label><br/>
-            <label> Enter your email: 
-                <input type="text" name="email" onChange={handleChange}/>
+            <label> About you: 
+                <textarea value={inputs.about} name="about" onChange={handleChange}/>
             </label><br/>
             <input type="submit" value="Submit"/>
         </form>
