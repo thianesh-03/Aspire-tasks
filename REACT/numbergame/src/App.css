@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+  background-color: #4e4e50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15%;
+}
+
+.container{
+  padding: 10px;
+  border: 2px solid whitesmoke;
+  width: 500px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.head{
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+input{
+  padding: 10px;
+  border: whitesmoke;
+  border-radius: 20px;
+}
+
+input:hover{
+  background-color: rgb(133, 131, 131);
+}
+
+input:focus{
+  background-color: rgb(133, 131, 131);
+  border: goldenrod;
+}
