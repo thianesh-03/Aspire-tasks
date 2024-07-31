@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Form from './Components/Form';
+// import Form from './Components/Form';
 // import Arrayer from './Components/array';
 // import List from './Components/list';
 // import Timer from './Components/Timer';
@@ -12,7 +12,7 @@ import Form from './Components/Form';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <Form/>
+    <App/>
   </>
 );
 // If you want to start measuring performance in your app, pass a function
