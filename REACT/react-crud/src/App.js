@@ -137,7 +137,7 @@ function App() {
             </tr>
           ))}
         </tbody>
-        <tfoot>
+        <tfoot> 
           <td></td>
           <td>
             <InputGroup
