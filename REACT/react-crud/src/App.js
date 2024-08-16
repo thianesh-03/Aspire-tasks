@@ -142,7 +142,7 @@ function App() {
           <td>
             <InputGroup
               value={newName}
-              placeholder="Enter name!"
+              placeholder="Enter name!" 
               onChange={(e) => {
                 setNewName(e.target.value);
               }}
