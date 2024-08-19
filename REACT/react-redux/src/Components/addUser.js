@@ -1,17 +1,19 @@
-import React, {useState} from 'react';
-import ViewUser from './viewUser';
+import React, { useState } from 'react';
+// import ViewUser from './viewUser';
+import { useDispatch } from 'react-redux';
+import { addUser as addUserAction } from '../slices/userSlice';
 
 export default function AddUser() {
-    const[user,setUser]=useState([]);
+    // const[user,setUser]=useState([]);
     const[input,setInput]=useState('');
+    const Dispatch = useDispatch();
 
     function addUser(){
         if(input){
-            setUser((previousState)=>[
-                ...previousState,input
-            ])
+            // setUser((previousState)=>[...previousState,input])
+            Dispatch(addUserAction(input));
             setInput("");
-            console.log(user);
+            // console.log(user);
         }
     }
 
@@ -20,6 +22,5 @@ export default function AddUser() {
         <input type='text' value={input} onChange={(event)=> setInput(event.target.value)}/>
         <button onClick={addUser}>Add</button>
     </div>
-    <ViewUser users={user}/>
     </>
 }
