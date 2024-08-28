@@ -38,7 +38,7 @@ to use aggregate function with match - db.users.aggregate([{ $match: { gender: "
 to delete an document - db.users.deleteOne({"email":"sachin.t@abc"});
 
 to update an document - db.users.updateOne({"email":"sachin.t@abc"}, {"$delete"},{upsert: true});
-the upsert is used for making other users to make changes
+In MongoDB, the term "upsert" is used in the context of update operations. It is a combination of "update" and "insert." When you perform an update operation, the upsert option allows MongoDB to either update an existing document if it matches the query or insert a new document if no match is found.
 
 types of update:
 1.update
