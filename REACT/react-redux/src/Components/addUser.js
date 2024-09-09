@@ -16,7 +16,7 @@ export default function AddUser() {
             // console.log(user);
         }
     }
-
+ 
     return <><div>
         <h1>Add new user</h1>
         <input type='text' value={input} onChange={(event)=> setInput(event.target.value)}/>
